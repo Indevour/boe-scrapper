@@ -1,6 +1,6 @@
 import pandas as pd
 
-DEFAULT_COLUMNS = ['id', 'date', 'cpv']
+DEFAULT_COLUMNS = ['id', 'date', 'cpv', 'investments']
 
 class Dataset:
     def __init__(self, columns=DEFAULT_COLUMNS):
@@ -17,8 +17,8 @@ class Dataset:
 def main():
     dataset = Dataset()
     dataset.addEntry({
-    'id': '1234',
-    'cpv': '72000000'
+        'id': '1234',
+        'cpv': '72000000'
     })
     dataset.exportAsCSV('./data.csv')
 
